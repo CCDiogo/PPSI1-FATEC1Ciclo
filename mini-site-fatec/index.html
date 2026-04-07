@@ -9,20 +9,26 @@
             font-size: 18px;
             background-image: url(img/fundo.png);
             padding: 0px 10px ;
-            background-repeat:repeat-y
+            background-repeat:repeat-y;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto
+        ;
         }
 
 
         h1{
             /* font-weight: normal; */
             font-size: 28px;
-            color: #da2222;
-            background-color: #222;
+            color: #f7f7f7;
+            background-color: #540028;
         }
 
         h2{
             font-size: 22px;
             color: #7c2323;
+            margin: 10px 0;
+            border-bottom: 3px solid #f00;
             
         }
          /* ------------------------------------------------------------
@@ -45,13 +51,15 @@
        }
 
        img{
-        float: right;
-        margin:10px 0 0 30px;
+        /* float: right; */
+        /* margin:10px 0 0 30px; */
         /* border-width: 5px;
         border-style: groove;
         border-color: #aaa; */
         border: 3px  solid #aaa;
         padding: 1px;
+        float: right;
+        margin: 5px 0px 0 15px;
        }
 
        caption{
@@ -70,8 +78,8 @@
        }
 
        thead{
-        background-color: #aaa;
-        color: #222;
+        background-color: #7c2323;
+        color: #f7f7f7;
        }
 
        th{
@@ -84,18 +92,31 @@
        }
 
        tbody > tr:hover{
-        background-color: #f00;
+        background-color: #540028;
         color: #f1f1f1;
        }
       
-       
+       /* Seletores personalizados  */
+
+       img.destaque-imagem{
+        float: left;
+        margin: 5px 15px 0 0;
+       }
+      tr.fundo--cinza{
+        background-color: rgb(236, 236, 236);
+      }
+      span#destaque-titulo{
+        color: #f00;
+      }
     </style>
 
 </head>
 
     <body id="topo">
-
-        <h1>FATEC Baixada Santista Rubens Lara</h1>
+        
+            
+        <!-- span não gera quebras e não possui informação semantica -->
+        <h1>FATEC Baixada Santista <span id="destaque-titulo">Rubens Lara</span></h1>
 
         <a href="index.html"><img src="img/fatec-rl-01.webp" class="hall" alt="Hall de entrada da FATEC Rubens Lara" loading="lazy"></a>
 
@@ -107,10 +128,10 @@
 
         <h2>História</h2>
 
-        <p>A Faculdade de Tecnologia da Baixada Santista, primeira faculdade pública de Santos, foi implantada inicialmente com o curso superior de Tecnologia em Processamento de Dados, com duas turmas de 40 alunos, funcionando nos períodos da manhã e da noite.</p>
-
-        <img src="img/fatec-rl-02.webp" alt="Sala de aula da FATEC Rubens Lara" width="300" height="225" loading="lazy">
-
+        
+        <p><img class="destaque-imagem" src="img/fatec-rl-02.webp" alt="Sala de aula da FATEC Rubens Lara" width="300" height="225" loading="lazy">
+        A Faculdade de Tecnologia da Baixada Santista, primeira faculdade pública de Santos, foi implantada inicialmente com o curso superior de Tecnologia em Processamento de Dados, com duas turmas de 40 alunos, funcionando nos períodos da manhã e da noite.</p>
+        
         <p>Com a construção de um novo prédio, também localizado em seu antigo endereço (Av. Bartolomeu de Gusmão, 110), a instituição passou a oferecer também o curso superior de Tecnologia em Informática com Ênfase em Gestão de Negócios (com 40 vagas semestrais, à tarde) e o curso superior de Tecnologia em Logística com Ênfase em Transportes (com 80 vagas semestrais, sendo 40 à tarde e 40 à noite).</p>
 
         <p> longo dos anos, novas graduações foram criadas, e algumas das formações já oferecidas tiveram suas matrizes curriculares reestruturadas.<p>
@@ -140,7 +161,7 @@
             <li>Logistica AMS</li>
         </ul>
 
- <h2> Vagas disponíveis por curso</h2>
+        <h2> Vagas disponíveis por curso</h2>
             
             <table>
                 <caption>Distribuição de vagas por  curso/turno</caption>
@@ -159,7 +180,7 @@
                         <td></td>
                         <td>25</td>
                     </tr>
-                    <tr>
+                    <tr class="fundo--cinza">
                         <td>Ciência de Dados</td>
                         <td>25</td>
                         <td></td>
@@ -171,7 +192,7 @@
                         <td>20*</td>
                         <td>25</td>
                     </tr>
-                    <tr>
+                    <tr class="fundo--cinza">
                         <td>Gestão Portuária</td>
                         <td>25</td>
                         <td></td>
@@ -183,7 +204,7 @@
                         <td></td>
                         <td>25</td>
                     </tr>
-                    <tr>
+                    <tr class="fundo--cinza">
                         <td>Logística</td>
                         <td>25</td>
                         <td></td>
@@ -195,7 +216,7 @@
                         <td>25</td>
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr class="fundo--cinza">
                         <td>Sistemas para Internet</td>
                         <td>25</td>
                         <td></td>
@@ -203,7 +224,7 @@
                     </tr>
                 </tbody>
             </table>
-<br>
+        <br>
         <address>
         <strong>Baixada Santista Rubens Lara</strong><br>
         Av. Senador Feijó, 350 - Vila Mathias<br>
@@ -215,7 +236,7 @@
         <p>
             <a href="#topo">Voltar ao topo</a>
         </p>
-
+        
     </body>
 
 
