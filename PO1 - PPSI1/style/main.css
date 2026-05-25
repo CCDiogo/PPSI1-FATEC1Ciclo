@@ -38,7 +38,7 @@ body{
 
 nav{
     background-color: #034637;
-    box-shadow: 0px 6px 10px 0px;
+    box-shadow: 0px 6px 10px 0px; /*Define a sombra de um elemento*/
     text-align: center;   
     margin: 0px 0px 10px 0px;
     padding: 10px;
@@ -70,7 +70,7 @@ a.site{
     margin-top: 6px;
 }
 main{
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
