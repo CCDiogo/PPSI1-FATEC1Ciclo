@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PO | Contato </title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <header>
+        <h1>Projeto Orientado</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="diogo-camblor.html">Diogo Camblor</a>
+        <a href="tabela-de-curiosidades.html">Tabela de Curiosidades</a>
+        <a href="#">Site favorito</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <main>
+        <h2>Deixe seus dados para que eu entre em contato </h2>
+        <form method="post" action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php" autocomplete="off">
+            
+            <fieldset>
+                <label id="label_1" for="name">Nome:</label>
+                <input type="text" name="Nome" id="name" required>
+                <label for="mail">E-mail</label>
+                <input type="email" name="E-mail" id="mail" required>
+                <label for="linkedin">LinkedIn</label>
+                <input type="url" name="LinkedIn" id="linkedin" required>
+                <label for="fone">Telefone(com DDD)</label>
+                <input type="tel" id="fone" name="Telefone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" required placeholder="(00)00000-0000">
+                <button>Enviar</button>
+            </fieldset>
+        </form>
+        <h2 id="h2-linkedin">Ou acesse o meu LinkedIn <a id="a-linkedin" href="https://www.linkedin.com/in/diogo-camblor-cunha/" target="_blank">Clicando aqui</a></h2>
+    
+    </main>
+     <footer>
+        <p>
+            Projeto desenvolvido no 1° semestre de S.I(Sistemas para Internet) na Fatec Rubens Lara. Projeto orientado pelo professor Alexandre Sobrino.
+        </p>
+    </footer>
+</body>
+</html>

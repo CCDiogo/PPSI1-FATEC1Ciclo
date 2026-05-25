@@ -16,35 +16,123 @@
     <body>
         <h1>Contato</h1>
 
-        <form method="post" action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php">
+        <!--ADICIONAR REQUIRED-->
+        <!--Há também o disable, readonly-->
+        <form method="post" action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php" autocomplete="off">
             <label for="nome">Nome</label><br>
-            <input type="text" id="nome" name="nome" size="35" maxlength="35" ><br>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome..." size="35" maxlength="35"  ><br>
 
             <label for="senha">Senha</label><br>
             <input type="password" id="senha" name="senha" size="10" maxlength="10"><br>
 
             <label for="mensagem">Mensagem</label><br>
             <textarea id="mensagem" name="mensagem" rows="5" cols="50"></textarea><br>
-
-            <label>Qual o seu curso</label><br>
-            <select>
+            
+                <!-- ADICIONAR REQUIRED -->
+            <label for="curso">Qual o seu curso</label><br>
+            <select name="curso" id="curso">
                 <option>Selecione...</option>
-                <option>Análise e Desenvolvimento de Sistemas</option>
-                <option>Gestão empresárial</option>
-                <option>Gestão Portuaria</option>
-                <option>Gestão de Recursos Humanos</option>
-                <option>Logística</option>
-                <option>Logística AMS</option>
-                <option>Sistemas para Internet</option>
-                <option>Processos Gerenciais </option>
-                <option>Ciência de Dados</option>
-            </select><br>
+                <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                <option value="ge">Gestão empresárial</option>
+                <option value="gp">Gestão Portuaria</option>
+                <option value="grh">Gestão de Recursos Humanos</option>
+                <option value="log">Logística</option>
+                <option value="log-ams">Logística AMS</option>
+                <option value="si">Sistemas para Internet</option>
+                <option value="pg">Processos Gerenciais </option>
+                <option value="cd">Ciência de Dados</option>
+            </select>
+            
+            <br>
+                <!-- ADICIONAR REQUIRED -->
+            <fieldset>
+                <legend>Você estuda na Fatec?</legend>
+                <input type="radio" name="estuda-na-fatec" value="s" id="estuda-sim">
+                <label for="estuda-sim">Sim</label>
 
-            <button>Enviar</button>
+                <input type="radio" name="estuda-na-fatec" value="n" id="estuda-nao">
+                <label for="estuda-nao">Não</label>
+            </fieldset>
+           
+            <br>
+                <!-- ADICIONAR REQUIRED -->
+            <fieldset>
+                <legend>Quais linguagens você programa?</legend>
+                <input type="checkbox" name="linguagem[]" value="html" id="html">
+                <label for="html"> HTML</label>
 
+                <input type="checkbox" name="linguagem[]" value="js" id="js">
+                <label for="js"> JavaScript</label>
+
+                <input type="checkbox" name="linguagem[]" value="py" id="py">
+                <label for="py"> Python</label>
+
+                <input type="checkbox" name="linguagem[]" value="c#" id="c#">
+                <label for="c#"> C#</label>
+
+            </fieldset>
+            <hr>
+
+            
             <!-- <input type="submit" value="nviar">
             <input type="reset" value="Limpar"> -->
+            <h2>TESTES</h2>
+            <label for="num">Nota</label>
+            <input type="number" name="numero" id="num" min="0" max="10" step="0.5">
+            <br>
 
+            <label for="ran">Barrinha deslizante</label>
+            0<input type="range" name="barra" id="ran" min="0" max="5" value="0">5
+            <br>
+
+            <label for="tel">Bota teu número ai</label>
+            <input type="tel" name="telefone"  id="tel">
+            <br>
+
+            <label for="url">Coloca um site legalzão</label>
+            <input type="url" name="url" id="url">
+            <br>
+
+            <label for="e-mail">Um e-mail bacanudo</label>
+            <input type="email" name="e-mail"  id="e-mail">
+            <br>
+
+            <label for="search">Pesquisa algo legal</label>
+            <input type="search" name="busca" value="" id="search">
+            <br>
+
+            <label for="cor">Cores</label>
+            <input type="color" name="cor"  id="cor">
+            <br>
+
+            <label for="data">Dia</label>
+            <input type="date" name="data" id="data">
+            <br>
+
+            <label for="horario">Horário</label>
+            <input type="time" name="horario" id="horario">
+                <br>     
+            <label for="datetime-local">Data e Hora</label>
+            <input type="datetime-local" name="datetime-local" id="datetime-local">
+                <br>     
+            <label for="mes">Mês</label>
+            <input type="month" name="Mês" id="mes">
+                <br>     
+            <label for="semana">Semana</label>
+            <input type="week" name="semana" id="semana">
+                <br>     
+            <label for="file">Arquivo</label>
+            <input type="file" name="Arquivo" id="file" accept="image/jpeg , image/png">
+                <br>     
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}">
+                <br>
+
+            
+            <input type="hidden" name="origem-form" value="ip-digasso">
+                <br>                 
+            
+            <button>Enviar</button>
         </form>
     </body>
 </html>
